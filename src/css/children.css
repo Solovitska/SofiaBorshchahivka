@@ -1,0 +1,153 @@
+/* Основні стилі для секції children */
+.children-section {
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Приховуємо переповнення */
+
+}
+
+/* Стилі для контенту секції */
+.children-content {
+  display: flex; /* Використовуємо flex для контенту */
+  flex-wrap: wrap; /* Додаємо обгортання */
+  justify-content: center; /* Центруємо вміст */
+  position: relative;
+  max-width: 800px; /* Максимальна ширина для центрування */
+
+  padding: 0 10px; /* Внутрішні відступи для уникнення горизонтального скролу */
+}
+
+/* Оформлення тексту */
+
+
+.child-text:hover {
+  transform: scale(1.05); /* Анімація збільшення при наведенні */
+}
+
+/* Стилі для зображень дітей */
+.images-child {
+  position: relative;
+  width: 100%; /* Ширина 100% для адаптивності */
+  max-width: 550px; /* Максимальна ширина для зображень на 768px і 1440px */
+  height: 320px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px; /* Відступи для зображень */
+  display: flex; /* Використовуємо flex для центрування */
+  justify-content: center; /* Центруємо зображення */
+  align-items: center; /* Вертикальне центрування */
+}
+
+.child-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Використання cover для заповнення контейнера */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.logo-image-1 {
+  opacity: 1; /* Перше зображення видиме спочатку */
+}
+
+.logo-image-2 {
+  animation: fadeInOut 8s ease-in-out infinite; /* Анімація другого зображення */
+  animation-delay: 4s;
+}
+
+/* Анімація появи зображення */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Анімація для тексту */
+@keyframes gradientPulse {
+  0% {
+    filter: brightness(1) contrast(1);
+  }
+  50% {
+    filter: brightness(1.2) contrast(1.1);
+  }
+  100% {
+    filter: brightness(1) contrast(1);
+  }
+}
+
+.animated-hands {
+  display: block;
+  margin: 0 auto;
+  animation: gradientPulse 3s ease-in-out infinite;
+}
+
+/* Адаптивні стилі */
+
+/* Для екрану 320px */
+@media (max-width: 320px) {
+  .children-section {
+    padding: 40px 10px;
+  }
+  .images-child {
+    width: 100%; /* Залишаємо ширину 100% для адаптивності */
+    height: 150px;
+  }
+
+}
+
+/* Для екрану 375px */
+@media (max-width: 375px)
+
+{
+  .children-section {
+    padding: 60px;
+  }
+  .children-section {
+    padding: 50px 15px;
+  }
+  .images-child {
+    width: 100%; /* Залишаємо ширину 100% для адаптивності */
+    height: 180px;
+  }
+  .child-text {
+    font-size: 18px;
+  }
+}
+
+/* Для екрану 768px і більше */
+@media (min-width: 768px) {
+  .children-content {
+    justify-content: center;
+  }
+  .images-child {
+    width: 100%; /* Залишаємо ширину 100% для адаптивності */
+    max-width: 600px; /* Збільшена максимальна ширина для зображень на 768px */
+    height: 360px; /* Збільшена висота для зображень на 768px */
+    align-items: center; /* Вертикальне центрування */
+  }
+
+}
+
+/* Для екрану 1440px */
+@media (min-width: 1440px) {
+  .children-content {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .images-child {
+    width: 100%; /* Залишаємо ширину 100% для адаптивності */
+    max-width: 700px; /* Збільшена максимальна ширина для зображень на 1440px */
+    height: 400px; /* Збільшена висота для зображень на 1440px */
+  }
+ 
+}
