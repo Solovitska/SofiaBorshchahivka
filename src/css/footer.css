@@ -1,21 +1,222 @@
+/* Базові стилі для секції footer */
 .footer {
-  padding: 20px 0;
-}
-.footer-desc {
+  padding: 40px 20px; /* Внутрішні відступи */
   text-align: center;
-}
-.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Вирівнювання по горизонталі */
+  justify-content: center; /* Вирівнювання по вертикалі */
   position: relative;
+  overflow: hidden;
 }
-.footer-link::before {
-  content: '';
-  position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%) skewX(-12deg);
-  z-index: -1;
-  width: 110%;
-  height: 24%;
-  background-color: #41d1ff;
-  transition: 200ms ease;
+
+/* Стилі для заголовка в футері */
+.section-title-footer {
+  font-size: 2rem; /* Розмір шрифту */
+  font-weight: bold; /* Жирний шрифт */
+  color: #4a4a4a; /* Колір тексту */
+  line-height: 1.4; /* Висота рядка для кращого читання */
+  margin: 20px 0; /* Відступи зверху і знизу */
+  background: linear-gradient(135deg, #e3e3e3, #c0c0c0); /* Градієнтний фон */
+  border-radius: 10px; /* Скруглення кутів */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для об'єму */
+  padding: 20px; /* Внутрішні відступи */
+}
+
+/* Стилі для фотографій у футері */
+.footer-photos {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Проміжок між зображеннями */
+  flex-wrap: wrap; /* Дозволяє зображенням обгортатися при зменшенні ширини */
+}
+
+/* Стилі для окремих фото */
+.photo-wide-footer {
+  width: 200px; /* Стандартна ширина для зображення */
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Анімація при наведенні */
+}
+
+.photo-wide-footer:hover {
+  transform: scale(1.1); /* Збільшення при наведенні */
+  opacity: 0.9; /* Зменшення прозорості при наведенні */
+}
+
+.text {
+  font-size: 28px;
+  line-height: 1.5;
+  background-color: rgba(255, 234, 202, 0.9);
+  padding: 20px 30px;
+  border-radius: 38px;
+  margin-top: 20px;
+  font-family: 'Georgia', serif; /* Додамо більш витончене сімейство шрифтів */
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e1c264;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+/* Адаптивні стилі */
+/* Стилі для контейнера зображення в футері */
+.footer-photo {
+  display: flex; /* Вирівнювання вмісту */
+  justify-content: center; /* Центрування по горизонталі */
+  align-items: center; /* Центрування по вертикалі */
+  margin: 20px 0; /* Відступи зверху і знизу */
+}
+
+/* Стилі для фотографій у футері */
+.photo-wide-footer {
+  width: 100%; /* Ширина зображення 100% від контейнера */
+  max-width: 400px; /* Максимальна ширина для зображення */
+  height: auto; /* Автоматичне збереження співвідношення сторін */
+  border-radius: 10px; /* Скруглення кутів */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Анімація при наведенні */
+}
+
+.photo-wide-footer:hover {
+  transform: scale(1.05); /* Збільшення при наведенні */
+  opacity: 0.9; /* Зменшення прозорості при наведенні */
+}
+
+/* Адаптивні стилі для футера */
+@media screen and (max-width: 768px) {
+  .footer-photo {
+    margin: 10px 0; /* Зменшені відступи на менших екранах */
+  }
+
+  .photo-wide-footer {
+    max-width: 90%; /* Зменшення максимального розміру зображення */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer-photo {
+    margin: 30px 0; /* Збільшені відступи на великих екранах */
+  }
+}
+@media screen and (max-width: 320px) {
+  .text {
+    font-size: 20px; /* Зменшений розмір шрифту для дуже маленьких екранів */
+    padding: 10px 15px; /* Зменшені внутрішні відступи */
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .section-title-footer {
+    font-size: 1.5rem; /* Зменшений розмір шрифту на малих пристроях */
+  }
+
+  .photo-wide-footer {
+    width: 150px; /* Зменшення ширини зображення для малих пристроїв */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-title-footer {
+    font-size: 2rem; /* Збільшений розмір шрифту на середніх пристроях */
+  }
+  .footer-photos{
+    width: 300px;
+    height: px;
+  }
+  .photo-wide-footer {
+    max-width: 90%; /* Зменшення розміру зображення для середніх пристроїв */
+  }
+
+  .text {
+    font-size: 24px; /* Зменшений розмір шрифту на середніх екранах */
+    padding: 15px 25px; /* Зменшені внутрішні відступи */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section-title-footer {
+    font-size: 3rem; /* Збільшений розмір шрифту на великих екранах */
+  }
+
+  .photo-wide-footer {
+    max-width: 800px; /* Максимальна ширина для великих екранів */
+  }
+
+  .text {
+    font-size: 30px; /* Збільшений розмір шрифту на великих екранах */
+  }
+}
+
+/* Анімація пульсації тексту */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    color: #4a4a4a; /* Початковий колір тексту */
+  }
+  50% {
+    transform: scale(1.05); /* Менший масштаб збільшення */
+    color: #ac8d1e; /* М'якший колір під час пульсації */
+  }
+}
+
+/* Стилі для слів з пульсацією */
+.pulse-text {
+  display: inline-block;
+  animation: pulse 5s infinite; /* Анімація з більшою тривалістю */
+}
+
+/* Стилі для зображень у футері */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрування зображень */
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Проміжок між зображеннями */
+}
+.transparent-image {
+  opacity: 0.7; /* Задайте необхідний рівень прозорості */
+  transition: opacity 0.3s ease; /* Додайте анімацію, якщо потрібно */
+}
+
+.transparent-image:hover {
+  opacity: 1; /* Збільшує прозорість при наведенні */
+}
+
+/* Стилі для логотипів */
+.footer-image {
+  width: 100px; /* Ширина для логотипів */
+  height: auto;
+  transition: transform 0.3s ease; /* Анімація при наведенні */
+}
+
+.footer-image:hover {
+  transform: scale(1.1); /* Збільшення при наведенні */
+}
+
+.footer-text {
+  position: relative;
+  overflow: hidden; /* Приховуємо текст, який виходить за межі контейнера */
+  white-space: nowrap; /* Зберігаємо текст в одному рядку */
+  font-family: 'Inter', sans-serif; /* Шрифт */
+  font-size: 1.5rem; /* Розмір шрифту */
+  color: hsl(235, 93%, 50%); /* Колір тексту */
+  background-color: rgba(228, 201, 158, 0.566); /* Легкий фон для читабельності */
+  padding: 10px 20px; /* Внутрішні відступи */
+  border-radius: 25px; /* Закруглення країв */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Тінь для виділення */
+  animation: marquee 15s linear infinite; /* Анімація */
+}
+
+/* Анімація бігучої строки */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Початкове положення: праворуч */
+  }
+  100% {
+    transform: translateX(-100%); /* Кінцеве положення: ліворуч */
+  }
 }

@@ -1,0 +1,89 @@
+.warrior {
+  padding: 60px 20px; /* Внутрішні відступи */
+  background-color: #f5f5f5; /* Колір фону */
+  text-align: center; /* Вирівнювання тексту по центру */
+  position: relative; /* Для позиціонування внутрішніх елементів */
+  overflow: hidden; /* Сховати все, що виходить за межі */
+  display: flex; /* Включаємо гнучке вирівнювання */
+  flex-direction: column; /* Вирівнювання елементів по вертикалі */
+  align-items: center; /* Центрування по горизонталі */
+  justify-content: center; /* Центрування по вертикалі */
+}
+
+.warrior-content {
+  position: relative; /* Позиціюємо вміст */
+  z-index: 1; /* Забезпечуємо, щоб вміст не перекривався */
+}
+
+.images-warrior {
+  display: flex; /* Включаємо гнучке вирівнювання */
+  justify-content: center; /* Центруємо елементи по горизонталі */
+  gap: 20px; /* Проміжок між зображеннями */
+  position: relative; /* Для можливого позиціонування дочірніх елементів */
+  flex-wrap: wrap; /* Дозволяє елементам обгортатися при зменшенні ширини */
+}
+
+.warrior-image {
+  width: 200px; /* Стандартна ширина зображення */
+  height: auto; /* Зберігаємо співвідношення сторін */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Анімація */
+}
+
+.warrior-image:hover {
+  transform: scale(1.1); /* Збільшення при наведенні */
+  opacity: 0.9; /* Зменшення прозорості */
+}
+
+.warrior-img {
+  display: inline-block; /* Вирівнюємо як рядковий блок */
+  text-decoration: none; /* Вимкнення підкреслення для посилань */
+}
+
+.logo-image-1 {
+  animation: float 5s ease-in-out infinite; /* Анімація для логотипа 1 */
+}
+
+.logo-image-3 {
+  animation: float 6s ease-in-out infinite reverse; /* Анімація для логотипа 3 */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0); /* Початкове положення */
+  }
+  50% {
+    transform: translateY(-10px); /* Піднімання */
+  }
+  100% {
+    transform: translateY(0); /* Повернення в початкове положення */
+  }
+}
+
+/* Адаптивні стилі для різних розміров екранів */
+@media (max-width: 320px) {
+  .warrior-image {
+    width: 100%; /* Зображення заповнює всю ширину контейнера */
+    max-width: 300px; /* Максимальна ширина */
+  }
+}
+
+@media (max-width: 375px) {
+  .warrior-image {
+    width: 100%; /* Заповнює ширину контейнера */
+    max-width: 350px; /* Максимальна ширина */
+  }
+}
+
+@media (max-width: 768px) {
+  .warrior-image {
+    width: 100%; /* Зображення заповнює всю ширину контейнера */
+    max-width: 400px; /* Максимальна ширина */
+  }
+}
+
+@media (min-width: 769px) {
+  .warrior-image {
+    width: 220px; /* Стандартна ширина для екранів більше 768px */
+  }
+}
+
