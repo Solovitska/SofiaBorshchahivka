@@ -1,0 +1,45 @@
+/* Галерея зображень */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  align-content: center;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s; /* Додаємо ефект тіні при наведенні */
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Збільшуємо тінь при наведенні */
+}
+
+/* Адаптивні стилі для галереї */
+@media (max-width: 768px) {
+  .image-gallery img {
+    max-width: calc(50% - 20px); /* Для двох зображень в ряд */
+    margin: 5px; /* Менша відстань між зображеннями */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .image-gallery img {
+    max-width: calc(33.33% - 20px); /* Три зображення в ряд на середніх екранах */
+    margin: 10px; /* Відстань між зображеннями */
+  }
+}
+
+@media (min-width: 1440px) {
+  .image-gallery img {
+    max-width: calc(25% - 20px); /* Чотири зображення в ряд на великих екранах */
+    margin: 10px; /* Відстань між зображеннями */
+  }
+}
