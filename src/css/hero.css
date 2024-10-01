@@ -1,0 +1,176 @@
+/* Основні стилі для секції hero */
+.hero {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9));
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 5px solid #e1c264b0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section {
+
+
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+}
+/* Стилі для контенту секції */
+.hero-content {
+  display: inline-block;
+  position: relative;
+  max-width: 800px;
+}
+
+/* Оформлення тексту */
+.hero-text {
+  font-size: 28px;
+  line-height: 1.5;
+  background-color: rgba(255, 234, 202, 0.9);
+  padding: 20px 30px;
+  border-radius: 38px;
+  margin-top: 20px;
+  font-family: 'Georgia', serif; /* Додамо більш витончене сімейство шрифтів */
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e1c264;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.hero-text:hover {
+  transform: scale(1.05); /* Анімація збільшення при наведенні */
+}
+
+/* Стилі для логотипів */
+.images {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.hero-image  {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.logo-image-1 {
+  opacity: 1;
+}
+
+.logo-image-2 {
+  animation: fadeInOut 8s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Анімація для тексту */
+@keyframes gradientPulse {
+  0% {
+    filter: brightness(1) contrast(1);
+  }
+  50% {
+    filter: brightness(1.2) contrast(1.1);
+  }
+  100% {
+    filter: brightness(1) contrast(1);
+  }
+}
+
+.animated-hands {
+  display: block;
+  margin: 0 auto;
+  animation: gradientPulse 3s ease-in-out infinite;
+}
+
+/* Адаптивні стилі */
+
+/* Для екрану 320px */
+@media (max-width: 320px) {
+  .hero {
+    padding: 40px 10px;
+  }
+  .images {
+    width: 250px;
+    height: 150px;
+  }
+  .hero-text {
+    font-size: 16px;
+  }
+}
+
+/* Для екрану 375px */
+@media (max-width: 375px) {
+  .hero {
+    padding: 50px 15px;
+  }
+  .images {
+    width: 300px;
+    height: 180px;
+  }
+  .hero-text {
+    font-size: 18px;
+  }
+}
+
+/* Для екрану 768px і більше */
+@media (min-width: 768px) {
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .hero-text {
+    margin-left: 20px;
+  }
+  .images {
+    width: 450px;
+    height: 320px;
+  }
+  .hero-text {
+    font-size: 20px;
+  }
+}
+
+/* Для екрану 1440px */
+@media (min-width: 1440px) {
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero-text {
+    margin-left: 40px;
+  }
+  .images {
+    width: 800px;
+    height: 400px;
+  }
+  .hero-text {
+    font-size: 24px;
+  }
+}
