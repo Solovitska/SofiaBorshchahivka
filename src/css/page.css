@@ -40,8 +40,6 @@ img {
 /* Стилі для контейнера зображень */
 .images-page {
   position: relative;
-  width: 300px; /* Зменшено для кращої адаптивності */
-  height: 300px; /* Зменшено для кращої адаптивності */
   overflow: hidden;
   border-radius: 15px; /* Закруглені краї */
   transition: transform 0.3s ease; /* Плавний перехід */
