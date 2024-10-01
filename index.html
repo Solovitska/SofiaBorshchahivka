@@ -6,28 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <script type="module" crossorigin src="/SofiaBorshchahivka/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/SofiaBorshchahivka/assets/styles-DvPDDfy5.css">
+    <link rel="stylesheet" crossorigin href="/SofiaBorshchahivka/assets/index-DrfwIc5f.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/SofiaBorshchahivka/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+    <header class="header" id="header" >
+  <div class="container header-container">
+
+    <div class="header-logo">
+      <img src="../img/header/photo-4.webp" alt="Sofiivska Borshchahivka" class="transparent-image" />
+      <p data-translate="heroText4" class="logo-description">Sofiivska Borshchahivka</p>
+
+      <button id="switch-lang" class="lang-button">
+        <img src="data:image/webp;base64,UklGRnwCAABXRUJQVlA4THACAAAv/8F/EK/BqG0kSZmDw/AnsUyWxL37npoqGozbNnLEfV7XV/WEjYzbtpEkO8lMat2297kF3AfrSJKV3HPBtciSlMiMX3f3ALA/fu8AzwSfgBn9ecWvWa9i3l5+lX3l6VWNfVWtq2vxiW12jauz8aoq59+1unBkrvM3xfdl1JETI0vs3/syvu3c/gVJ6m6yCtviqyKsvqj4rsIJ7BW4gQ7MAh+YIAAxYIABAwjAoexxpYd1V0iSJEmRpBhm5mlmLMqd/v/juPvmSx4Q0f8JEPqf/qf/6X/6n/6n/+l/+v9/iBvNFozdDu2nN5plZYKyZbNRTw+kMZhVCdSVaWN/MS4TtG0c+/nxKsG7GuseenmCePR21ZgkmIftpDV3oFvsoJ071KO9VadwsGtni1aW4J7FRo15Arw1Npk45GODvoM+1jQy1GW2apRgbyuaJe6suTRKwDcxWxTIUxPrJej3zKbYU1uU2LNF18FvQ/TpL/TFHH2Woy8r0WcV+qpE/9P/9D/9T//T//Q//U//0//0P/1P/9P/9D/9T//T/4TgEf1P/9P/9D/9T//T//Q//U//0//0P/1P/9P/9D/9T/8Tgsfo81P06Tn6/Ap9eou+eESfv6LvtX6KPa1LYC/EnrGnYvUz5J2pmD0g70HM7PMUd/q5ZA+4e5CVtXPUeayyF9SprL/DXMiGtUvERW0T+3C8ucrmb2doO3PZ1s+x5m+yvV4iLVR2WbvDWdRkx89nGDtX2f33/Qm+Ql32+q6n2NL7kL1/PV0fo8qv40sO018ebi5OsBR+86BfcuC1zw8YWwj9T//T//Q//U//0//0P/3/P8Q=" alt="Ukrainian Flag" class="flag-icon" />
+        <img src="data:image/webp;base64,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" alt="English Flag" class="flag-icon" />
+      </button>
+
+    </div>
+
+
+    <div class="header-content">
+      <h1 class="styled-title">
+        <span class="highlight">HANSEN Ukrainian</span> <br>
+        <span  class="yellow-highlight">mission </span>
+      </h1>
+    </div>
+
+
+    <div class="header-actions">
+      <a href="#" data-translate="heroText5" class="scroll-button" id="show-images">Learn more</a>
+    </div>
   </div>
 </header>
+
+
+<div class="image-gallery" id="image-gallery" style="display: none;">
+  <img src="./img/hero/sofi.webp" alt="Image 1" />
+  <img src="./img/hero/sof4.webp" alt="Image 2" />
+  <img src="./img/hero/dobra-sprava.webp" alt="Image 3" />
+</div>
+
 
 
     <main>
