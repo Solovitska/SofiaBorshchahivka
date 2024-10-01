@@ -1,8 +1,7 @@
 .covers {
-  padding: 30px 20px; /* Збільшено відступи */
+  padding: 30px 20px;
   display: flex;
   justify-content: center;
-
   text-align: center;
   overflow: hidden;
 }
@@ -11,16 +10,16 @@
 .covers-content {
   position: relative;
   display: inline-block;
-  padding: 20px; /* Збільшено відступи */
-  border-radius: 20px; /* Закруглені краї */
-  background: rgba(255, 255, 255, 0.9); /* Світлий прозорий фон */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Легка тінь для обсягу */
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавне збільшення при наведенні */
 }
 
 .covers-content:hover {
-  transform: translateY(-5px); /* Легке підняття при наведенні */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Підсилена тінь при наведенні */
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); 
 }
 
 /* Стилі для контейнера зображень */
@@ -40,20 +39,20 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease, transform 1s ease; /* Плавні переходи */
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 /* Перше зображення видиме спочатку */
 .logo-image-1 {
   opacity: 1;
-  transform: scale(1); /* Без змін */
+  transform: scale(1);
 }
 
 /* Друге зображення з анімацією */
 .logo-image-2 {
   opacity: 0;
-  transform: scale(1.1); /* Збільшене друге зображення */
-  animation: fadeInOut 5s ease-in-out infinite; /* Неперервна анімація */
+  transform: scale(1.1);
+  animation: fadeInOut 5s ease-in-out infinite;
 }
 
 /* Анімація появи другого зображення */
@@ -64,7 +63,7 @@
   }
   50% {
     opacity: 1;
-    transform: scale(1); /* Плавне зменшення масштабу */
+    transform: scale(1);
   }
 }
 
@@ -73,9 +72,40 @@
   display: block;
   border-radius: 10px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease; /* Плавний перехід */
+  transition: box-shadow 0.3s ease;
 }
 
 .covers-img:hover {
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5); /* Світла тінь при наведенні */
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
+}
+
+/* Медіа-запити для адаптивності */
+@media (min-width: 768px) {
+  .covers {
+    padding: 40px 30px;
+  }
+
+  .covers-content {
+    padding: 30px;
+  }
+
+  .images-covers {
+    width: 400px;
+    height: 480px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .covers {
+    padding: 50px 40px;
+  }
+
+  .covers-content {
+    padding: 40px;
+  }
+
+  .images-covers {
+    width: 450px;
+    height: 540px;
+  }
 }
