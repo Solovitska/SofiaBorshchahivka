@@ -1,0 +1,164 @@
+/* Основні стилі для секції сім'ї */
+.family-section {
+  padding: 20px 10px;
+  text-align: center;
+  position: relative;
+  overflow: auto; /* Додано для управління переповненням */
+}
+
+/* Стилі для контенту секції */
+.family-content {
+  display: flex; /* Використовуємо flex для контенту */
+  flex-wrap: wrap; /* Додаємо обгортання */
+  justify-content: center; /* Центруємо вміст */
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto; /* Центруємо секцію */
+}
+
+/* Оформлення тексту */
+.family-text {
+  font-size: 28px;
+  line-height: 1.5;
+  background-color: rgba(255, 234, 202, 0.9);
+  padding: 20px 30px;
+  border-radius: 38px;
+  margin: 20px 0; /* Вирівнюємо верхній і нижній відступи */
+  font-family: 'Georgia', serif; /* Витончений шрифт */
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e1c264;
+  transition: transform 0.3s ease-in-out;
+}
+
+.family-text:hover {
+  transform: scale(1.05); /* Анімація збільшення при наведенні */
+}
+
+/* Стилі для зображень сім'ї */
+.images-family {
+  position: relative;
+  width: 400px;  /* Ширина, як у секції дітей */
+  height: 250px; /* Висота, як у секції дітей */
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px; /* Додано відступи для зображень */
+}
+
+.family-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Використовуємо contain, щоб зображення не обрізалось */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.logo-image-1 {
+  opacity: 1; /* Перше зображення видиме спочатку */
+}
+
+.logo-image-2 {
+  animation: fadeInOut 8s ease-in-out infinite; /* Анімація другого зображення */
+  animation-delay: 4s;
+}
+
+/* Анімація появи зображення */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Анімація для тексту */
+@keyframes gradientPulse {
+  0% {
+    filter: brightness(1) contrast(1);
+  }
+  50% {
+    filter: brightness(1.2) contrast(1.1);
+  }
+  100% {
+    filter: brightness(1) contrast(1);
+  }
+}
+
+.animated-hands {
+  display: block;
+  margin: 0 auto;
+  animation: gradientPulse 3s ease-in-out infinite; /* Час анімації зменшено для узгодженості */
+}
+
+/* Адаптивні стилі для різних екранів */
+
+/* Для екрану 320px */
+@media (max-width: 320px) {
+  .family-section {
+    padding: 40px 10px;
+  }
+  .images-family {
+    width: 250px;
+    height: 150px;
+  }
+  .family-text {
+    font-size: 16px;
+  }
+}
+
+/* Для екрану 375px */
+@media (max-width: 375px) {
+  .family-section {
+    padding: 50px 15px;
+  }
+  .images-family {
+    width: 300px;
+    height: 180px;
+  }
+}
+
+/* Для екрану 768px і більше */
+@media (min-width: 768px) {
+  .family-content {
+    justify-content: center;
+    align-items: flex-start; /* Вирівнюємо по верхньому краю */
+    text-align: left; /* Вирівнюємо текст ліворуч */
+  }
+
+  .family-text {
+    margin: 20px; /* Додано відступи з усіх боків */
+    font-size: 24px; /* Зменшений шрифт для кращої адаптації */
+    padding: 15px 20px; /* Зменшені внутрішні відступи */
+  }
+
+  .images-family {
+    width: 350px; /* Трохи зменшена ширина для адаптивності */
+    height: 220px; /* Висота зменшена */
+  }
+}
+
+/* Для екрану 1440px */
+@media (min-width: 1440px) {
+  .family-content {
+    justify-content: space-between; /* Розміщуємо вміст з відстанню між елементами */
+    align-items: center; /* Центруємо по вертикалі */
+  }
+
+  .images-family {
+    width: 500px; /* Збільшена ширина */
+    height: 400px; /* Збільшена висота */
+  }
+
+  .family-text {
+    font-size: 28px; /* Збільшений шрифт для кращої читабельності */
+    margin: 30px; /* Вирівнюємо відступи */
+  }
+}
