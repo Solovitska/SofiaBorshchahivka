@@ -1,19 +1,36 @@
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+<header class="header" id="header" >
+  <div class="container header-container">
+
+    <div class="header-logo">
+      <img src="../img/header/photo-4.webp" alt="Sofiivska Borshchahivka" class="transparent-image" />
+      <p data-translate="heroText4" class="logo-description">Sofiivska Borshchahivka</p>
+
+      <button id="switch-lang" class="lang-button">
+        <img src="./img/header/ukraine-flag-icon.webp" alt="Ukrainian Flag" class="flag-icon" />
+        <img src="./img/header/ENG.webp" alt="English Flag" class="flag-icon" />
+      </button>
+
+    </div>
+
+
+    <div class="header-content">
+      <h1 class="styled-title">
+        <span class="highlight">HANSEN Ukrainian</span> <br>
+        <span  class="yellow-highlight">mission </span>
+      </h1>
+    </div>
+
+
+    <div class="header-actions">
+      <a href="#" data-translate="heroText5" class="scroll-button" id="show-images">Learn more</a>
+    </div>
   </div>
 </header>
+
+
+<div class="image-gallery" id="image-gallery" style="display: none;">
+  <img src="./img/hero/sofi.webp" alt="Image 1" />
+  <img src="./img/hero/sof4.webp" alt="Image 2" />
+  <img src="./img/hero/dobra-sprava.webp" alt="Image 3" />
+</div>
+
