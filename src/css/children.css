@@ -3,7 +3,6 @@
   text-align: center;
   position: relative;
   overflow: hidden; /* Приховуємо переповнення */
-
 }
 
 /* Стилі для контенту секції */
@@ -13,13 +12,10 @@
   justify-content: center; /* Центруємо вміст */
   position: relative;
   max-width: 800px; /* Максимальна ширина для центрування */
-
   padding: 0 10px; /* Внутрішні відступи для уникнення горизонтального скролу */
 }
 
 /* Оформлення тексту */
-
-
 .child-text:hover {
   transform: scale(1.05); /* Анімація збільшення при наведенні */
 }
@@ -27,7 +23,7 @@
 /* Стилі для зображень дітей */
 .images-child {
   position: relative;
-  width: 100%; /* Ширина 100% для адаптивності */
+ 
   max-width: 550px; /* Максимальна ширина для зображень на 768px і 1440px */
   height: 320px;
   overflow: hidden;
@@ -102,20 +98,15 @@
     width: 100%; /* Залишаємо ширину 100% для адаптивності */
     height: 150px;
   }
-
 }
 
 /* Для екрану 375px */
-@media (max-width: 375px)
-
-{
-  .children-section {
-    padding: 60px;
-  }
+@media (max-width: 375px) {
   .children-section {
     padding: 50px 15px;
   }
   .images-child {
+    margin: 0 auto; /* Центрування зображення */
     width: 100%; /* Залишаємо ширину 100% для адаптивності */
     height: 180px;
   }
@@ -134,8 +125,12 @@
     max-width: 600px; /* Збільшена максимальна ширина для зображень на 768px */
     height: 360px; /* Збільшена висота для зображень на 768px */
     align-items: center; /* Вертикальне центрування */
+    transition: transform 0.3s ease; /* Додаємо плавну анімацію */
   }
 
+  .images-child:hover {
+    transform: scale(1.05); /* Збільшення зображення при наведенні */
+  }
 }
 
 /* Для екрану 1440px */
@@ -148,6 +143,10 @@
     width: 100%; /* Залишаємо ширину 100% для адаптивності */
     max-width: 700px; /* Збільшена максимальна ширина для зображень на 1440px */
     height: 400px; /* Збільшена висота для зображень на 1440px */
+    transition: transform 0.3s ease; /* Додаємо плавну анімацію */
   }
- 
+
+  .images-child:hover {
+    transform: scale(1.1); /* Більше збільшення на великих екранах */
+  }
 }
