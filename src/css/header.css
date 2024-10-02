@@ -1,5 +1,5 @@
 body {
-  background-image: url('../img/header/color.png');
+  background-image: url('../img/header/color1.webp');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -49,11 +49,10 @@ body {
   background: url('../img/header/sofia.webp') no-repeat center center/cover;
   padding: 0 20px;
   text-align: center;
-  border-radius: 15px;
   margin: auto;
   position: relative;
   background-size: cover;
-  background-position: center center; 
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
